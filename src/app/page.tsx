@@ -222,6 +222,7 @@ export default function Home() {
                   <li>Pioneered the launch of a new credit card onboarding journey on Salesforce, authoring the BRD, technical architecture, and process notes in 3 months.</li>
                   <li>Reduced critical error instances in the customer journey from 20% to 6% by implementing Adobe Analytics dashboards for monitoring and targeted bug fixes.</li>
                   <li>Enhanced KYC efficiency from 30% to 70% by digitalizing the biometric KYC process and optimizing the VKYC journey to just 3 screens.</li>
+                  {/* eslint-disable-next-line react/no-unescaped-entities */}
                   <li>Increased application flow-through rate by 20% by conducting primary research and user interviews to identify and resolve critical bugs.</li>
                 </ul>
               </div>
