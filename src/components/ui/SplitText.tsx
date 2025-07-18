@@ -97,8 +97,10 @@ const SplitText = ({
       return;
     }
 
-    targets.forEach((t: HTMLElement) => {
-      t.style.willChange = "transform, opacity";
+    targets.forEach((t: Element) => {
+      if (t instanceof HTMLElement) {
+        t.style.willChange = "transform, opacity";
+      }
     });
 
     const startPct = (1 - threshold) * 100;

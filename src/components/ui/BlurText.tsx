@@ -1,5 +1,5 @@
 "use client";
-import { motion } from 'framer-motion';
+import { motion, type Transition, type TargetAndTransition } from 'framer-motion';
 import { useEffect, useRef, useState, useMemo } from 'react';
 import { cn } from "@/lib/utils";
 
@@ -11,23 +11,30 @@ interface BlurTextProps {
   direction?: 'top' | 'bottom';
   threshold?: number;
   rootMargin?: string;
-  animationFrom?: Record<string, unknown>;
-  animationTo?: Record<string, unknown>[];
+  animationFrom?: TargetAndTransition;
+  animationTo?: TargetAndTransition[];
   easing?: (t: number) => number;
   onAnimationComplete?: () => void;
   stepDuration?: number;
 }
 
-const buildKeyframes = (from: Record<string, unknown>, steps: Record<string, unknown>[]) => {
-  const keys = new Set([
+const buildKeyframes = (from: TargetAndTransition, steps: TargetAndTransition[]): TargetAndTransition => {
+  const result: Record<string, unknown> = {};
+  
+  // Get all unique keys from from and steps
+  const allKeys = new Set([
     ...Object.keys(from),
-    ...steps.flatMap((s) => Object.keys(s)),
+    ...steps.flatMap(step => Object.keys(step))
   ]);
-  const keyframes: Record<string, unknown[]> = {};
-  keys.forEach((k) => {
-    keyframes[k] = [from[k], ...steps.map((s) => s[k])];
+  
+  // Build keyframes for each property
+  allKeys.forEach(key => {
+    const fromValue = (from as Record<string, unknown>)[key];
+    const stepValues = steps.map(step => (step as Record<string, unknown>)[key]);
+    result[key] = [fromValue, ...stepValues];
   });
-  return keyframes;
+  
+  return result as TargetAndTransition;
 };
 
 const BlurText = ({
@@ -120,12 +127,12 @@ const BlurText = ({
         const subElements = animateBy === 'words' ? segment.split(' ') : segment.split('');
         return subElements.map((word, index) => {
           const animateKeyframes = buildKeyframes(fromSnapshot, toSnapshots);
-          const spanTransition: Record<string, unknown> = {
+          const spanTransition: Transition = {
             duration: totalDuration,
             times,
             delay: ((idx * 100) + (index * delay)) / 1000,
+            ease: easing,
           };
-          (spanTransition as Record<string, unknown>).ease = easing;
           return (
             <motion.span
               className={cn(
