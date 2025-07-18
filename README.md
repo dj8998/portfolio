@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dinesh Jangid - Portfolio Website
 
-## Getting Started
+A modern, interactive portfolio website showcasing my work as a Product Manager and Developer. Built with cutting-edge web technologies and featuring smooth animations and engaging user interactions.
 
-First, run the development server:
+## 🚀 Features
 
+- **Interactive Animations**: GSAP and Framer Motion powered animations
+- **Modern Design**: Clean, professional layout with spotlight effects
+- **Responsive**: Optimized for all device sizes
+- **Performance**: Built with Next.js 15 and React 19
+- **Custom Components**: Unique UI elements like FlowingMenu, ScrollStack, and SpotlightCards
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Frontend**: React 19, TypeScript
+- **Styling**: Tailwind CSS 4
+- **Animations**: GSAP, Framer Motion, Lenis (smooth scroll)
+- **Icons**: Lucide React
+- **Deployment**: Vercel
+
+## 🎨 Key Components
+
+- **Stack Component**: Interactive image stack with physics
+- **SplitText**: Character-by-character text animations
+- **SpotlightCard**: Mouse-following spotlight effects
+- **ScrollStack**: Scroll-triggered stacking animations
+- **FlowingMenu**: Animated skill showcase with marquee effects
+
+## 🚀 Getting Started
+
+1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone [your-repo-url]
+cd personalproj
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Learn More
+## 📁 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   └── ui/
+│       ├── Stack.tsx
+│       ├── SplitText.tsx
+│       ├── SpotlightCard.tsx
+│       ├── ScrollStack.tsx
+│       ├── FlowingMenu.tsx
+│       └── ...
+└── lib/
+    └── utils.ts
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎯 Sections
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Hero**: Interactive image stack with animated introduction
+- **Projects**: Showcase of professional and personal projects
+- **Timeline**: Career journey visualization
+- **Experience**: Detailed work history with scroll animations
+- **Skills**: Interactive skill categories with hover effects
+- **Contact**: Easy ways to connect
 
-## Deploy on Vercel
+## 🔧 Customization
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To customize for your own portfolio:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Update personal information in `src/app/page.tsx`
+2. Replace project data and links
+3. Modify the hero text and images
+4. Update contact information in `ContactSection.tsx`
+5. Customize colors and animations in component files
+
+## 📱 Performance
+
+- Optimized images with Next.js Image component
+- Lazy loading for animations
+- Efficient bundle splitting
+- SEO optimized with proper metadata
+
+## 🚀 Deployment
+
+Deploy easily on Vercel:
+
+```bash
+npm run build
+```
+
+Or deploy directly from GitHub with Vercel's Git integration.
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
