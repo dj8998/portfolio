@@ -1,5 +1,5 @@
 // Simple analytics helper
-export const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+export const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
   if (typeof window !== 'undefined') {
     // Add your analytics provider here (Google Analytics, Mixpanel, etc.)
     console.log('Event tracked:', eventName, properties);

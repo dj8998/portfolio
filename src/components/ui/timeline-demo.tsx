@@ -64,7 +64,7 @@ export function TimelineDemo() {
         <div>
           <h4 className="font-semibold mb-1">Invented, Prototyped, and Patented</h4>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal">
-            Was selected for the intensive 'Invention Factory' program, where I developed a novel hardware device and successfully filed a provisional patent for it.
+            Was selected for the intensive &apos;Invention Factory&apos; program, where I developed a novel hardware device and successfully filed a provisional patent for it.
           </p>
         </div>
       ),
@@ -75,7 +75,7 @@ export function TimelineDemo() {
         <div>
           <h4 className="font-semibold mb-1">Began My Engineering Journey at IIT Bombay</h4>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal">
-            Secured a spot at one of India's premier engineering institutes, laying the foundation for my problem-solving and analytical skills.
+            Secured a spot at one of India&apos;s premier engineering institutes, laying the foundation for my problem-solving and analytical skills.
           </p>
         </div>
       ),
@@ -87,7 +87,7 @@ export function TimelineDemo() {
         A Timeline of My Journey
       </h2>
       <p className="text-lg md:text-2xl text-left w-full mb-10 text-black font-semibold max-w-2xl">
-        From engineering principles to product-led growth, here's a look at my path.
+        From engineering principles to product-led growth, here&apos;s a look at my path.
       </p>
       <div className="h-[32rem] overflow-y-auto rounded-xl bg-transparent">
         <Timeline data={data} />
