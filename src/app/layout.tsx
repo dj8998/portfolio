@@ -20,8 +20,8 @@ const staatliches = Staatliches({
 });
 
 export const metadata: Metadata = {
-  title: "Dinesh Jangid - Product Manager & Developer",
-  description: "Product Manager with fintech expertise at Kotak & HDFC Life. Building digital solutions and innovative web experiences.",
+  title: "Dinesh Jangid | Portfolio",
+  description: "The personal portfolio of Dinesh Jangid. Product builder, creative technologist, and lifelong learner.",
   keywords: "Product Manager, Fintech, JavaScript, React, Next.js, Portfolio",
   authors: [{ name: "Dinesh Jangid" }],
   openGraph: {
@@ -38,6 +38,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon/favicon.ico" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased ${staatliches.variable}`}
       >

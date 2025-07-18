@@ -1,6 +1,6 @@
 "use client";
 import { motion } from 'framer-motion';
-import { useEffect, useRef, useState, useMemo, ReactNode } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
 import { cn } from "@/lib/utils";
 
 interface BlurTextProps {
@@ -12,7 +12,7 @@ interface BlurTextProps {
   threshold?: number;
   rootMargin?: string;
   animationFrom?: any;
-  animationTo?: any;
+  animationTo?: any[];
   easing?: (t: number) => number;
   onAnimationComplete?: () => void;
   stepDuration?: number;

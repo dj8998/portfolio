@@ -9,7 +9,6 @@ import ScrollStack, { ScrollStackItem } from "@/components/ui/ScrollStack";
 import { TimelineDemo } from "@/components/ui/timeline-demo";
 import { UnderlineDemo } from "@/components/ui/demo-underline";
 import FlowingMenu from "@/components/ui/FlowingMenu";
-import ContactSection from "@/components/ui/ContactSection";
 
 const images = [
   { id: 1, img: "/images/card1.png" },
@@ -101,7 +100,7 @@ export default function Home() {
       <section id="projects" className="relative z-10 flex flex-col items-start justify-center w-full pt-8 pb-16 bg-transparent max-w-[90vw] mx-auto px-4">
         <h2 className="text-3xl md:text-5xl font-extrabold font-cartoon text-left mb-2">My Projects</h2>
         <p className="text-lg md:text-2xl text-left w-full mb-10 text-black font-semibold">
-          I love to create things, and I'm always working on something new! You can view some of my favorite projects below.
+          I love to create things, and I&apos;m always working on something new! You can view some of my favorite projects below.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full">
           <a href="https://qualfirst.co.in/" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
@@ -197,7 +196,7 @@ export default function Home() {
       <section id="resume" className="relative z-10 flex flex-col items-start justify-center w-full pt-8 pb-32 bg-transparent max-w-[90vw] mx-auto px-4">
         <h2 className="text-3xl md:text-5xl font-extrabold font-cartoon text-left mb-2">My Work Experience</h2>
         <p className="text-lg md:text-2xl text-left w-full mb-10 text-black font-semibold">
-          Here’s a quick look at my experience. Scroll to see more!
+          Here&apos;s a quick look at my experience. Scroll to see more!
         </p>
         <div className="w-full max-w-[90vw] mx-auto h-auto min-h-[28rem] sm:h-[22rem] sm:min-h-0 overflow-y-auto">
           <ScrollStack
