@@ -28,7 +28,7 @@ class ErrorBoundary extends Component<Props, State> {
       return (
         <div className="flex flex-col items-center justify-center min-h-screen p-8">
           <h2 className="text-2xl font-bold mb-4">Oops, something went wrong!</h2>
-          <p className="text-gray-600 mb-4">Don't worry, it's not you - it's me. Try refreshing the page.</p>
+          <p className="text-gray-600 mb-4">Don&apos;t worry, it&apos;s not you - it&apos;s me. Try refreshing the page.</p>
           <button
             className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
             onClick={() => this.setState({ hasError: false })}

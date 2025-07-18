@@ -1,6 +1,7 @@
 "use client";
 import { motion, useMotionValue, useTransform } from "framer-motion";
-import { useState, ReactNode, useEffect } from "react";
+import { useState, useEffect } from "react";
+import Image from "next/image";
 
 interface CardData {
   id: number;
@@ -8,7 +9,7 @@ interface CardData {
 }
 
 interface CardRotateProps {
-  children: ReactNode;
+  children: React.ReactNode;
   onSendToBack: () => void;
   sensitivity: number;
 }
@@ -19,11 +20,12 @@ function CardRotate({ children, onSendToBack, sensitivity }: CardRotateProps) {
   const rotateX = useTransform(y, [-100, 100], [60, -60]);
   const rotateY = useTransform(x, [-100, 100], [-60, 60]);
 
-  function handleDragEnd(_: any, info: any) {
-    console.log('onDragEnd', info.offset);
+  function handleDragEnd(_: unknown, info: unknown) {
+    console.log('onDragEnd', info);
+    const infoTyped = info as { offset: { x: number; y: number } };
     if (
-      Math.abs(info.offset.x) > sensitivity ||
-      Math.abs(info.offset.y) > sensitivity
+      Math.abs(infoTyped.offset.x) > sensitivity ||
+      Math.abs(infoTyped.offset.y) > sensitivity
     ) {
       onSendToBack();
     } else {
@@ -77,7 +79,7 @@ export default function Stack({
         ]
   );
 
-  const sendToBack = (id: number) => {
+  const sendToBack = (id: unknown) => {
     setCards((prev) => {
       const newCards = [...prev];
       const index = newCards.findIndex((card) => card.id === id);
@@ -86,6 +88,13 @@ export default function Stack({
       return newCards;
     });
   };
+
+  // Move randomRotate and setRandomRotate to the main component body
+  const [randomRotates, setRandomRotates] = useState<number[]>(() => cardsData.map(() => 0));
+  useEffect(() => {
+    setRandomRotates(cardsData.map(() => randomRotation ? Math.random() * 10 - 5 : 0));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [randomRotation, cardsData.length]);
 
   return (
     <div
@@ -96,54 +105,46 @@ export default function Stack({
         perspective: 600,
       }}
     >
-      {cards.map((card, index) => {
-        // Generate random rotation only on the client to avoid hydration mismatch
-        const [randomRotate, setRandomRotate] = useState(0);
-        useEffect(() => {
-          if (randomRotation) {
-            setRandomRotate(Math.random() * 10 - 5);
-          } else {
-            setRandomRotate(0);
-          }
-        }, [randomRotation, card.id]);
-        return (
-          <CardRotate
-            key={card.id}
-            onSendToBack={() => sendToBack(card.id)}
-            sensitivity={sensitivity}
+      {cards.map((card, index) => (
+        <CardRotate
+          key={card.id}
+          onSendToBack={() => sendToBack(card.id)}
+          sensitivity={sensitivity}
+        >
+          <motion.div
+            className="rounded-2xl border-4 border-white overflow-hidden shadow-lg"
+            onClick={() => {
+              console.log('onClick card', card.id);
+              sendToBackOnClick && sendToBack(card.id);
+            }}
+            animate={{
+              rotateZ: (cards.length - index - 1) * 4 + randomRotates[index],
+              scale: 1 + index * 0.06 - cards.length * 0.06,
+              transformOrigin: "90% 90%",
+            }}
+            initial={false}
+            transition={{
+              type: "spring",
+              stiffness: animationConfig.stiffness,
+              damping: animationConfig.damping,
+            }}
+            style={{
+              width: cardDimensions.width,
+              height: cardDimensions.height,
+            }}
           >
-            <motion.div
-              className="rounded-2xl border-4 border-white overflow-hidden shadow-lg"
-              onClick={() => {
-                console.log('onClick card', card.id);
-                sendToBackOnClick && sendToBack(card.id);
-              }}
-              animate={{
-                rotateZ: (cards.length - index - 1) * 4 + randomRotate,
-                scale: 1 + index * 0.06 - cards.length * 0.06,
-                transformOrigin: "90% 90%",
-              }}
-              initial={false}
-              transition={{
-                type: "spring",
-                stiffness: animationConfig.stiffness,
-                damping: animationConfig.damping,
-              }}
-              style={{
-                width: cardDimensions.width,
-                height: cardDimensions.height,
-              }}
-            >
-              <img
-                src={card.img}
-                alt={`card-${card.id}`}
-                className="w-full h-full object-cover select-none"
-                draggable={false}
-              />
-            </motion.div>
-          </CardRotate>
-        );
-      })}
+            <Image
+              src={card.img}
+              alt={`card-${card.id}`}
+              className="w-full h-full object-cover select-none"
+              draggable={false}
+              width={cardDimensions.width}
+              height={cardDimensions.height}
+              priority
+            />
+          </motion.div>
+        </CardRotate>
+      ))}
     </div>
   );
 } 

@@ -43,7 +43,7 @@ const ScrollStack = ({
   const scrollerRef = useRef<HTMLDivElement>(null);
   const stackCompletedRef = useRef(false);
   const animationFrameRef = useRef<number | null>(null);
-  const lenisRef = useRef<any>(null);
+  const lenisRef = useRef<Lenis | null>(null);
   const cardsRef = useRef<HTMLDivElement[]>([]);
   const lastTransformsRef = useRef<Map<number, any>>(new Map());
   const isUpdatingRef = useRef(false);
@@ -164,7 +164,7 @@ const ScrollStack = ({
     parsePercentage,
   ]);
 
-  const handleScroll = useCallback(() => {
+  const handleScroll = useCallback((e: unknown) => {
     updateCardTransforms();
   }, [updateCardTransforms]);
 

@@ -12,11 +12,9 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="relative z-10 flex flex-col items-center justify-center w-full py-16 bg-transparent max-w-[90vw] mx-auto px-4">
-      {/* eslint-disable-next-line react/no-unescaped-entities */}
-      <h2 className="text-3xl md:text-5xl font-extrabold font-cartoon text-center mb-8">Let's Connect</h2>
-      {/* eslint-disable-next-line react/no-unescaped-entities */}
+      <h2 className="text-3xl md:text-5xl font-extrabold font-cartoon text-center mb-8">Let&apos;s Connect</h2>
       <p className="text-lg md:text-xl text-center max-w-2xl mb-12 text-black/80">
-        Interested in collaborating or have a project in mind? I'd love to hear from you.
+        Interested in collaborating or have a project in mind? I&apos;d love to hear from you.
       </p>
       
       <div className="flex flex-col sm:flex-row gap-6 items-center">
