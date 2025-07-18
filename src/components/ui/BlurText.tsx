@@ -11,14 +11,13 @@ interface BlurTextProps {
   direction?: 'top' | 'bottom';
   threshold?: number;
   rootMargin?: string;
-  animationFrom?: any;
-  animationTo?: any[];
+  animationFrom?: Record<string, unknown>;
+  animationTo?: Record<string, unknown>[];
   easing?: (t: number) => number;
   onAnimationComplete?: () => void;
   stepDuration?: number;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const buildKeyframes = (from: Record<string, unknown>, steps: Record<string, unknown>[]) => {
   const keys = new Set([
     ...Object.keys(from),
@@ -121,14 +120,12 @@ const BlurText = ({
         const subElements = animateBy === 'words' ? segment.split(' ') : segment.split('');
         return subElements.map((word, index) => {
           const animateKeyframes = buildKeyframes(fromSnapshot, toSnapshots);
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           const spanTransition: Record<string, unknown> = {
             duration: totalDuration,
             times,
             delay: ((idx * 100) + (index * delay)) / 1000,
           };
-          // @ts-expect-error: easing is not typed
-          (spanTransition as any).ease = easing;
+          (spanTransition as Record<string, unknown>).ease = easing;
           return (
             <motion.span
               className={cn(

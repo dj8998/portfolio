@@ -13,8 +13,8 @@ interface SplitTextProps {
   duration?: number;
   ease?: string;
   splitType?: "chars" | "words" | "lines";
-  from?: Record<string, any>;
-  to?: Record<string, any>;
+  from?: Record<string, unknown>;
+  to?: Record<string, unknown>;
   threshold?: number;
   rootMargin?: string;
   textAlign?: string;
@@ -53,7 +53,7 @@ const SplitText = ({
 }: SplitTextProps) => {
   const ref = useRef<HTMLParagraphElement | null>(null);
   const animationCompletedRef = useRef(false);
-  const scrollTriggerRef = useRef<any>(null);
+  const scrollTriggerRef = useRef<ScrollTrigger | null>(null);
 
   useEffect(() => {
     if (typeof window === "undefined" || !ref.current || !text) return;
@@ -64,7 +64,7 @@ const SplitText = ({
     const absoluteLines = splitType === "lines";
     if (absoluteLines) el.style.position = "relative";
 
-    let splitter: any;
+    let splitter: GSAPSplitText | null = null;
     try {
       splitter = new GSAPSplitText(el, {
         type: splitType,
@@ -114,7 +114,7 @@ const SplitText = ({
         start,
         toggleActions: "play none none none",
         once: true,
-        onToggle: (self: any) => {
+        onToggle: (self: ScrollTrigger) => {
           scrollTriggerRef.current = self;
         },
       },

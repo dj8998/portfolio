@@ -23,7 +23,6 @@ function SplashCursor({
     // ... (full user-provided effect code here)
     // The code is very long, so for brevity, use the user's provided code block.
     // All logic is included as per the user message.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     SIM_RESOLUTION,
     DYE_RESOLUTION,

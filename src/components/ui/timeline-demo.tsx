@@ -7,7 +7,7 @@ export function TimelineDemo() {
       title: "2025",
       content: (
         <div>
-          <h4 className="font-semibold mb-1">Embracing the Founder's Mindset</h4>
+          <h4 className="font-semibold mb-1">Embracing the Founder&apos;s Mindset</h4>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal">
             Building my own ventures, from a B2B export platform to creative web projects. Currently designing a new furniture collection and seeking my next product challenge.
           </p>
@@ -42,7 +42,7 @@ export function TimelineDemo() {
         <div>
           <h4 className="font-semibold mb-1">Transitioned from Code to Customer</h4>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal">
-            Made the official move from a NodeJS developer to an Associate Product Manager at HDFC Life, realizing my passion was in shaping the 'why' behind the product.
+            Made the official move from a NodeJS developer to an Associate Product Manager at HDFC Life, realizing my passion was in shaping the &apos;why&apos; behind the product.
           </p>
         </div>
       ),

@@ -115,7 +115,9 @@ export default function Stack({
             className="rounded-2xl border-4 border-white overflow-hidden shadow-lg"
             onClick={() => {
               console.log('onClick card', card.id);
-              sendToBackOnClick && sendToBack(card.id);
+              if (sendToBackOnClick) {
+                sendToBack(card.id);
+              }
             }}
             animate={{
               rotateZ: (cards.length - index - 1) * 4 + randomRotates[index],

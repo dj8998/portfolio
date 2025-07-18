@@ -175,7 +175,7 @@ export default function Home() {
                 &times;
               </button>
               <h3 className="text-2xl font-bold mb-2 text-black">This project is retired!</h3>
-              <p className="text-black mb-4">Unfortunately, this project is no longer available. Don't worry, it may come back some day. In the meantime, why not check out some of my other projects?</p>
+              <p className="text-black mb-4">Unfortunately, this project is no longer available. Don&apos;t worry, it may come back some day. In the meantime, why not check out some of my other projects?</p>
               <button
                 className="mt-2 px-4 py-2 bg-black text-white rounded hover:bg-gray-800"
                 onClick={() => setShowEcoModal(false)}
