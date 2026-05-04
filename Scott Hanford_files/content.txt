@@ -1,0 +1,70 @@
+[HEADINGS]
+1|Building products that work — from fintech to FMCG
+2|Hi, I'm Dinesh! 👋
+3|I like building products and figuring out why they break. Currently a Product Manager. Formerly a developer. Always a founder.
+4|I'VE WORKED WITH...
+5|What does "product" mean to me?
+6|From writing code to owning the product
+7|about me
+8|currently
+9|previously
+10|building
+11|Experience:
+12|Types of work I do
+13|Product Management
+14|Analytics & Growth
+15|Technical & Building
+16|Feel free to reach out about:
+
+[PARAGRAPHS]
+1|I like to build products that actually work. To me, product sits at the intersection of Engineering & Business — you need to understand both to ship something people use. I prefer to get into the details: funnels, APIs, user flows, the messy stuff that sits between a user tapping "Apply Now" and actually getting approved. If you need someone who can own a product end-to-end — from writing the BRD to debugging the API to presenting the numbers — I'm your guy. I'm based in Mumbai for now.
+2|Current Product Consultant. Former PM at Kotak & HDFC Life. Former founder. IIT Bombay.
+3|Product is where engineering, design, and business collide into something that a real person actually uses. I've seen too many features get shipped because someone asked for them, not because they solved a problem. The best product work happens when you start with "why are users dropping off" instead of "what should we build next."
+4|I've owned products at a large bank where a single bug could affect millions of applications. I've also built things from scratch in 8 weeks with no team and no budget. Both taught me different things — scale taught me rigour, building from zero taught me speed.
+5|CONTACT INFO
+
+[BULLET_POINTS]
+1|Product Consulting at Nesway Foods — delivering products to a BSE-listed manufacturer
+2|Building a mass-market FMCG brand (energy bars, biscuits) — clean label, affordable for everyone
+3|Looking for a remote PM role — end-to-end ownership, metrics-driven
+4|Product Manager, Credit Cards @ Kotak Mahindra Bank — cut errors from 20% to 6%, grew KYC pass rate 30% to 70%
+5|Associate Product Manager @ HDFC Life — solo PM on term plans, moved conversion from 6% to 45%
+6|Engineering Trainee @ HDFC Life — NodeJS developer, shipped 4+ features, ran campaigns that drove 60% YoY uplift
+7|Founded Qualfirst — B2B handicrafts marketplace, built in 8 weeks, got a UK client (then shut it down — model didn't scale)
+8|Consulted on food R&D for Foods & Inns (BSE-listed) — shipped 3 SKUs for their Greentop brand
+9|Filed a design patent (Transfer Stool) during IIT Bombay's Invention Factory program
+10|B.Tech, Chemical Engineering @ IIT Bombay (2017–2021)
+11|Product ownership & roadmapping
+12|BRD & technical specifications
+13|User research & customer interviews
+14|A/B testing & conversion optimisation
+15|Sprint planning & cross-functional delivery
+16|Funnel analysis & drop-off diagnosis
+17|Adobe Analytics, Amplitude, SQL
+18|Dashboard creation & KPI monitoring
+19|Segment discovery & targeting
+20|Conversion rate optimisation
+21|React, NodeJS, Supabase, Vercel
+22|Figma prototyping & wireframing
+23|Full-stack web app development
+24|Salesforce & Azure DevOps
+25|Rapid prototyping with Cursor & AI tools
+
+[OTHER_TEXT]
+1|I started my tech career writing NodeJS at HDFC Life — building insurance products for real customers. But over the years I learned I'm really a PM at heart. I've spent the last 4 years bouncing between engineering and product, and honestly, I like sitting in between.
+
+I'm passionate about understanding why users drop off, not just what feature to build next. At HDFC Life, I took over the term plan journey with nobody above me and moved conversion from 6% to 45%. At Kotak, I owned credit card onboarding — the kind of work where you're debugging API flows with engineers in the morning and presenting drop-off funnels to the VP in the afternoon.
+
+I have been a founder 1x: building a B2B handicrafts marketplace, got a UK client, shipped actual product across borders (which was cool), and then shut it down when the model didn't scale (which was less cool, but I'm glad I did it fast). I also ran an Airbnb out of my spare bedroom for 6 months that paid my entire rent. Not exactly a startup, but it taught me more about operations than any textbook.
+
+I love 0 → 1 product management. I love the messy middle where nothing is figured out yet. I love user research. I love building things myself — which is why I still write React, prototype in Figma, and ship full-stack apps on weekends. And I love food, which is why I'm now working on a mass-market FMCG brand.
+
+Reach out if you're building something or want to chat founder/PM stuff, fintech, growth, or why credit card onboarding is way harder than it looks.
+2|Hiring me
+3|Product consulting
+4|Freelance / contract PM work
+5|I like to build products that actually work. To me, product sits at the intersection of Engineering & Business — you need to understand both to ship something people use. I prefer to get into the details: funnels, APIs, user flows, the messy stuff that sits between a user tapping "Apply Now" and actually getting approved. If you need someone who can own a product end-to-end — from writing the BRD to debugging the API to presenting the numbers — I'm your guy. I'm based in Mumbai for now.
+6|Worked at:
+7|Built:
+8|Consulting:
+9|LinkedIn | GitHub | Email
