@@ -1,14 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  async rewrites() {
-    return [
-      {
-        source: "/:path*",
-        destination: "/index.html",
-      },
-    ];
-  },
+  // No rewrites: let Next serve real static assets from `public/`.
 };
 
 export default nextConfig;
